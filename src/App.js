@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import BoxSizing from './components/BoxSizing';
 
 class App extends Component {

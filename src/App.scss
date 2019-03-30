@@ -1,10 +1,10 @@
+@import './variables.scss';
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
 }
-
 h1 {
   padding: 0;
   margin: 0;
@@ -14,7 +14,6 @@ h1 {
   font-size: 3em;
   color: white;
 }
-
 .target {
   box-sizing: content-box;
   padding: 3em;
@@ -22,37 +21,31 @@ h1 {
   width: 400px;
 
   border: red solid 1px;
-  
 }
-
 .one {
   max-width: 100%;
   padding: 10em;
 
   background-color: rgb(40, 40, 83);
 }
-
 .two {
   max-width: 100%;
   padding: 10em;
 
   background-color: rgb(206, 60, 60);
 }
-
 .three {
   max-width: 100%;
   padding: 10em;
 
   background-color: rgb(58, 116, 66);
 }
-
 .four {
   max-width: 100%;
   padding: 10em;
 
   background-color: rgb(122, 62, 122);
 }
-
 .five {
   max-width: 100%;
   padding: 10em;
