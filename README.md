@@ -4,10 +4,10 @@
 
 ### Included:
 * Demo of box-sizing: Content-Box (default)  vs. Border-Box
+* Flexbox - Why it is the fix to all your problems
 
 ### Upcoming:
 * Sticky positioning - What is it? How do I use it?
-* Flexbox - Why it is the fix to all your problems
 * Grid - How to use it and when you should
 * Transitions - How to set them up. How to customize them!
 * Buttons - Fun different types of buttons you can use in your own projects!
