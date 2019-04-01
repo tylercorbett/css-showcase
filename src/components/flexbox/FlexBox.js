@@ -2,14 +2,9 @@ import React, { PureComponent } from 'react';
 import styles from './FlexBox.module.scss';
 
 export default class FlexBox extends PureComponent {
-  state = {
-    flexDirection: 'row'
-  }
   handleChange = event => {
-    console.log(event.target.value);
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
-    console.log(boxContainer);
     boxContainer.style.flexDirection = (value);
   }
   render() {
