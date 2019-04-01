@@ -16,7 +16,7 @@ export default class BoxSizing extends PureComponent {
   render() {
       return (
           <>  
-            <header>
+            <header className={styles.header}>
               <h2 className={styles.title}> Content-Box (Default) vs. Border-Box</h2>
             </header>
             <main className={styles.main}>

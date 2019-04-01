@@ -7,14 +7,14 @@ class App extends Component {
   render() {
     return (
       <main>
+         <div className='three'>
+            <BoxSizing/>
+        </div>
         <div className='one'>
           <ButtonShowcase/>
         </div>
         <div className='two'>
           <h1>Div 2</h1>
-        </div>
-        <div className='three'>
-            <BoxSizing/>
         </div>
         <div className='four'>
           <h1>Div 4</h1>
