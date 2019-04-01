@@ -1,6 +1,14 @@
+.boxContainer {
+    display: flex;
+    width: 85%;
+    padding: 2%;
+    border: 4px white groove;
+}
 .main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .select {
     width: 15%;
@@ -9,9 +17,59 @@
 }
 .title {
     padding: 2%;
-    margin: 0;
+    margin: 0 auto 2% auto;
     width: 100%;
     text-align: center;
     font-size: 2.3em;
     color: white;
+    background-color: rgb(156, 46, 46);
+}
+
+.one {
+    width: 10%;
+    height: 15%;
+    padding: 1%;
+    margin: 1%;
+    background-color: rgb(204, 53, 196);
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 2px white solid;
+}
+.two {
+    width: 10%;
+    height: 15%;
+    padding: 1%;
+    margin: 1%;
+    background-color: rgb(75, 124, 75);
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 2px white solid;
+}
+.three {
+    width: 10%;
+    height: 15%;
+    padding: 1%;
+    margin: 1%;
+    background-color: rgb(92, 63, 158);
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 2px white solid;
+}
+.four {
+    width: 10%;
+    height: 15%;
+    padding: 1%;
+    margin: 1%;
+    background-color: rgb(106, 171, 187);
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bold;
+    border: 2px white solid;
 }

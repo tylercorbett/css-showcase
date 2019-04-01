@@ -9,7 +9,7 @@ export default class FlexBox extends PureComponent {
     return(
       <>
         <header>
-          <h2 className={styles.title}>Flex Box Demo</h2>
+          <h2 className={styles.title}>Flex Box</h2>
         </header>
         <main className={styles.main}>
             <select className={styles.select}>
@@ -18,6 +18,12 @@ export default class FlexBox extends PureComponent {
                 <option value='column'>Column</option>
                 <option value='columnReverse'>Column-Reverse</option>
             </select>
+            <div className={styles.boxContainer}>
+                <div className={styles.one}>1</div>
+                <div className={styles.two}>2</div>
+                <div className={styles.three}>3</div>
+                <div className={styles.four}>4</div>
+            </div>
         </main>
       </>
     )
