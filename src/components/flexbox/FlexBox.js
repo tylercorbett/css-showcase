@@ -2,10 +2,20 @@ import React, { PureComponent } from 'react';
 import styles from './FlexBox.module.scss';
 
 export default class FlexBox extends PureComponent {
-  handleChange = event => {
+  handleChangeDirection = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.flexDirection = (value);
+  }
+  handleChangeJustify = event => {
+    const value = event.target.value;
+    const boxContainer = document.getElementsByName('boxContainer')[0];
+    boxContainer.style.justifyContent = (value);
+  }
+  handleChangeAlign = event => {
+    const value = event.target.value;
+    const boxContainer = document.getElementsByName('boxContainer')[0];
+    boxContainer.style.alignItems = (value);
   }
   render() {
     return(
@@ -14,15 +24,35 @@ export default class FlexBox extends PureComponent {
           <h2 className={styles.title}>Flex Box</h2>
         </header>
         <main className={styles.main}>
+          <div className={styles.controls}>
             <div className={styles.flexDirection}>
-                <label className={styles.directionLabel}>Flex Direction</label>
-                <select className={styles.select} onChange={this.handleChange}>
-                    <option value='row'>Row</option>
-                    <option value='row-reverse'>Row-Reverse</option>
-                    <option value='column'>Column</option>
-                    <option value='column-reverse'>Column-Reverse</option>
-                </select>
-            </div>
+                  <label className={styles.directionLabel}>Flex Direction</label>
+                  <select className={styles.select} onChange={this.handleChangeDirection} name='flexDirection'>
+                      <option value='row'>Row</option>
+                      <option value='row-reverse'>Row-Reverse</option>
+                      <option value='column'>Column</option>
+                      <option value='column-reverse'>Column-Reverse</option>
+                  </select>
+              </div>
+              <div className={styles.flexDirection}>
+                  <label className={styles.directionLabel}>Justify Content</label>
+                  <select className={styles.select} onChange={this.handleChangeJustify}>
+                      <option value='flex-start'>Flex-Start</option>
+                      <option value='flex-end'>Flex-End</option>
+                      <option value='center'>Center</option>
+                      <option value='space-around'>Space-Around</option>
+                      <option value='space-between'>Space-Between</option>
+                  </select>
+              </div>
+              <div className={styles.flexDirection}>
+                  <label className={styles.directionLabel}>Align Items</label>
+                  <select className={styles.select} onChange={this.handleChangeAlign}>
+                      <option value='flex-start'>Flex-Start</option>
+                      <option value='flex-end'>Flex-End</option>
+                      <option value='center'>Center</option>
+                  </select>
+              </div>
+          </div>
             <div className={styles.boxContainer} name='boxContainer'>
                 <div className={styles.one}>1</div>
                 <div className={styles.two}>2</div>
