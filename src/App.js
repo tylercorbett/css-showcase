@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.scss';
-import BoxSizing from './components/BoxSizing';
+import BoxSizing from './components/boxsizing/BoxSizing';
+import ButtonShowcase from './components/buttonshowcase/ButtonShowcase';
 
 class App extends Component {
   render() {
     return (
       <main>
         <div className='one'>
-          <h1 >Div 1</h1>
+          <ButtonShowcase/>
         </div>
         <div className='two'>
           <h1>Div 2</h1>

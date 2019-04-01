@@ -2,8 +2,13 @@
   width: 30%;
   padding: 10em;
   margin: 0 auto 1em auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 
   background-color: rgb(61, 61, 124);
+  color: white;
+  text-align: center;
 }
 .changeButton {
   padding: 2%;
@@ -16,7 +21,13 @@
   &:hover {
     cursor: pointer; 
     box-shadow: 0 0 1em white;
+    color: rgb(224, 224, 224);
   }
+}
+.description {
+  color: white;
+  font-size: 150%;
+  text-align: center;
 }
 .main {
   display: flex;
