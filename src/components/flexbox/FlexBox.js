@@ -60,7 +60,7 @@ export default class FlexBox extends PureComponent {
                 <div className={styles.four}>4</div>
             </div>
             <p className={styles.description}>
-                Flex box is everyting you need to position elements how you&#39;d like. Play with some of the above controls to move these four boxes around.
+                Flex box is everything you need to position elements how you&#39;d like. Play with some of the above controls to move these four boxes around.
             </p>
         </main>
       </>

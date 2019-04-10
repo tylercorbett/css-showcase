@@ -1,3 +1,28 @@
+.backgroundColor {
+    margin: 2%;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    padding: 1%;
+}
+.colorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+}
+.controlsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
 .h2 {
     margin: auto;
     width: 40%;
@@ -5,14 +30,57 @@
     color: white;
     font-size: 300%;
 }
-.button1Container {
-    width: 20%;
-    margin: 3% auto 3% auto;
-
-}
-.button1 {
+.h3 {
+    color: white;
     width: 100%;
-    padding: 1em;
-    font-size: 140%;
-    font-weight: 500;
+    margin: 1%;
+    text-align: center;
+}
+.main {
+    display: flex;
+    align-items: center;
+}
+.myButton {
+    width: 70%!important;
+    padding: 3%;
+    font-size: 120%;
+    font-weight: bold;
+    border-radius: 0;
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.myButton:hover {
+    background-color: transparent!important;
+    border: 3px solid black;
+}
+.p {
+    margin: 1% auto 0 auto;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    line-height: 1.6em;
+}
+.select {
+    width: 80%;
+    margin: 1%;
+    font-size: 120%;
+}
+.shapeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    width: 30%;
+}
+.title {
+    padding: 2%;
+    margin: 0 auto 2% auto;
+    width: 100%;
+    text-align: center;
+    font-size: 2.3em;
+    color: white;
+    background-color: rgb(40, 40, 83);
 }
