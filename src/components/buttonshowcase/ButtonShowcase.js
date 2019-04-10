@@ -17,6 +17,13 @@ export default class ButtonShowcase extends PureComponent {
     const value = event.target.value;
     myButton.style.backgroundColor = value;
   }
+  handleChangeFontSize = event => {
+    const myButton = document.getElementsByName('myButton')[0];
+    const value = event.target.value;
+    const fontSize = parseInt(value) + '%';
+    console.log(fontSize);
+    myButton.style.fontSize = fontSize;
+  }
   render() {
     return (
       <>
@@ -34,7 +41,7 @@ export default class ButtonShowcase extends PureComponent {
             </div>
             <div className={styles.colorContainer}>
               <h3 className={styles.h3}>Font Size</h3>
-              <input className={styles.backgroundColor} type='range' name='font-size' onChange={this.handleChange}/>
+              <input className={styles.backgroundColor} type='range' name='font-size' min='10' max='250' value='120' onChange={this.handleChangeFontSize}/>
             </div>
             <div className={styles.colorContainer}>
               <h3 className={styles.h3}>Font Color</h3>
