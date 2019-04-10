@@ -3,7 +3,7 @@ import styles from './ButtonShowcase.module.scss';
 
 export default class ButtonShowcase extends PureComponent {
   handleChange = event => {
-    console.log(event.target.value);
+    console.log(event.target.name, event.target.value);
   }
   render() {
     return (
@@ -15,10 +15,9 @@ export default class ButtonShowcase extends PureComponent {
           <div className={styles.controlsContainer}>
             <div className={styles.shapeContainer}>
               <h3 className={styles.h3}>Shape</h3>
-              <select className={styles.select} onChange={this.handleChange}>
-                <option name='square' value='square'>Square</option>
-                <option name='rounded' value='rounded'>Rounded</option>
-                <option name='circle' value='circle'>Circle</option>
+              <select className={styles.select} onChange={this.handleChange} name='border-radius'>
+                <option name='square' value='0'>Square</option>
+                <option name='rounded' value='2em'>Rounded</option>
               </select>
             </div>
             <div className={styles.colorContainer}>
