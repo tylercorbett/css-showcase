@@ -2,25 +2,6 @@ import React, { PureComponent } from 'react';
 import styles from './ButtonShowcase.module.scss';
 
 export default class ButtonShowcase extends PureComponent {
-  getStyle(el: Element, styleProp: string): string {
-    let value;
-    const defaultView = el.ownerDocument.defaultView;
-    // W3C standard way:
-    if (defaultView && defaultView.getComputedStyle) {
-      // sanitize property name to css notation (hypen separated words eg. font-Size)
-      styleProp = styleProp.replace(/([A-Z])/g, '-$1').toLowerCase();
-      return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
-    } else if (el['currentStyle']) { // IE
-      // sanitize property name to camelCase
-      styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
-        return letter.toUpperCase();
-      });
-      value = el['currentStyle'][styleProp];
-      return value;
-    }
-
-    return '';
-  }
   handleChangeBorderRadius = event => {
     const myButton = document.getElementsByName('myButton')[0];
     const value = event.target.value;
