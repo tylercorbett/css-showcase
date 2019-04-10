@@ -2,8 +2,10 @@ import React, { PureComponent } from 'react';
 import styles from './ButtonShowcase.module.scss';
 
 export default class ButtonShowcase extends PureComponent {
-  handleChange = event => {
-    console.log(event.target.name, event.target.value);
+  handleChangeBorderRadius = event => {
+    const myButton = document.getElementsByName('myButton')[0];
+    const value = event.target.value;
+    myButton.style.borderRadius = value;
   }
   render() {
     return (
@@ -15,7 +17,7 @@ export default class ButtonShowcase extends PureComponent {
           <div className={styles.controlsContainer}>
             <div className={styles.shapeContainer}>
               <h3 className={styles.h3}>Shape</h3>
-              <select className={styles.select} onChange={this.handleChange} name='border-radius'>
+              <select className={styles.select} onChange={this.handleChangeBorderRadius} name='border-radius'>
                 <option name='square' value='0'>Square</option>
                 <option name='rounded' value='2em'>Rounded</option>
               </select>
