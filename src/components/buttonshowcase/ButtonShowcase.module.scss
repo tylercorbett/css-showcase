@@ -48,9 +48,10 @@
     border-radius: 0;
     border: none;
     color: black;
+    cursor: pointer;
 }
 .myButton:hover {
-    background-color: red;
+    background-color: red!important;
 }
 .p {
     margin: 1% auto 0 auto;
