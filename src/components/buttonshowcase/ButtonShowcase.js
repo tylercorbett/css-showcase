@@ -3,7 +3,7 @@ import styles from './ButtonShowcase.module.scss';
 
 export default class ButtonShowcase extends PureComponent {
   handleChange = event => {
-    console.log('it changed');
+    console.log(event.target.value);
   }
   render() {
     return (
