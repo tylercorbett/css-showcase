@@ -1,3 +1,6 @@
+.backgroundColor {
+    margin: 2%;
+}
 .buttonContainer {
     display: flex;
     justify-content: center;
@@ -6,17 +9,18 @@
     margin: auto;
     padding: 1%;
 }
-.color {
-    margin: 2%;
-}
 .colorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 2%;
 }
 .controlsContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 50%;
     margin: auto;
 }
 .h2 {
@@ -32,7 +36,12 @@
     margin: 1%;
     text-align: center;
 }
+.main {
+    display: flex;
+    align-items: center;
+}
 .myButton {
+    width: 70%;
     padding: 3%;
     font-size: 120%;
     font-weight: bold;
