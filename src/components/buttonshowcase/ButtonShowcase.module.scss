@@ -84,3 +84,12 @@
     color: white;
     background-color: rgb(40, 40, 83);
 }
+@media only screen and (max-width: 800px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .myButton {
+        margin: 18% auto 2% auto;
+    }
+}
