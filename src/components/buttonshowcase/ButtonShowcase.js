@@ -20,9 +20,8 @@ export default class ButtonShowcase extends PureComponent {
   handleChangeFontSize = event => {
     const myButton = document.getElementsByName('myButton')[0];
     const value = event.target.value;
-    const fontSize = parseInt(value) + '%';
-    console.log(fontSize);
-    myButton.style.fontSize = fontSize;
+    const newFontSize = parseInt(value) + '%';
+    myButton.style.fontSize = newFontSize;
   }
   render() {
     return (
