@@ -5,9 +5,16 @@ export default class ButtonShowcase extends PureComponent {
   render() {
     return (
       <>
-        <h2 className={styles.h2}>Fancy Buttons</h2>
-        <div className={styles.button1Container}>
-          <button className={styles.button1}>Press Me</button>
+        <header>
+          <h2 className={styles.title}>Button Builder</h2>
+        </header>
+        <div className={styles.controlsContainer}>
+          <select className={styles.select}>
+            <option name='round' value='round'>Round</option>
+            <option name='square' value='square'>Square</option>
+            <option name='circle' value='circle'>Circle</option>
+          </select>
+          <input className={styles.color} type='color'/>
         </div>
       </>
     )

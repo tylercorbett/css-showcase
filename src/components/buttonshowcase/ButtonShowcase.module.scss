@@ -1,3 +1,13 @@
+.color {
+    margin: 1%;
+}
+.controlsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
 .h2 {
     margin: auto;
     width: 40%;
@@ -5,14 +15,17 @@
     color: white;
     font-size: 300%;
 }
-.button1Container {
+.select {
     width: 20%;
-    margin: 3% auto 3% auto;
-
+    margin: 1%;
+    font-size: 120%;
 }
-.button1 {
+.title {
+    padding: 2%;
+    margin: 0 auto 2% auto;
     width: 100%;
-    padding: 1em;
-    font-size: 140%;
-    font-weight: 500;
+    text-align: center;
+    font-size: 2.3em;
+    color: white;
+    background-color: rgb(40, 40, 83);
 }
