@@ -49,9 +49,11 @@
     border: none;
     color: black;
     cursor: pointer;
+    transition: .2s ease-in-out;
 }
 .myButton:hover {
-    background-color: red!important;
+    background-color: transparent!important;
+    border: 3px solid black;
 }
 .p {
     margin: 1% auto 0 auto;
