@@ -7,6 +7,11 @@ export default class ButtonShowcase extends PureComponent {
     const value = event.target.value;
     myButton.style.borderRadius = value;
   }
+  handleChangeFontColor = event => {
+    const myButton = document.getElementsByName('myButton')[0];
+    const value = event.target.value;
+    myButton.style.color = value;
+  }
   render() {
     return (
       <>
@@ -27,11 +32,11 @@ export default class ButtonShowcase extends PureComponent {
               <input className={styles.backgroundColor} type='range' name='font-size' onChange={this.handleChange}/>
             </div>
             <div className={styles.colorContainer}>
-              <h3 className={styles.h3}>Background Color</h3>
-              <input className={styles.backgroundColor} type='color' onChange={this.handleChange}/>
+              <h3 className={styles.h3}>Font Color</h3>
+              <input className={styles.backgroundColor} type='color' onChange={this.handleChangeFontColor}/>
             </div>
             <div className={styles.colorContainer}>
-              <h3 className={styles.h3}>Font Color</h3>
+              <h3 className={styles.h3}>Background Color</h3>
               <input className={styles.backgroundColor} type='color' onChange={this.handleChange}/>
             </div>
           </div>
