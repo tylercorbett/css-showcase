@@ -48,7 +48,7 @@ export default class ButtonShowcase extends PureComponent {
             </div>
             <div className={styles.colorContainer}>
               <h3 className={styles.h3}>Background Color</h3>
-              <input className={styles.backgroundColor} type='color' onChange={this.handleChangeBackgroundColor}/>
+              <input className={styles.backgroundColor} type='color' onChange={this.handleChangeBackgroundColor} defaultValue='#f8f8f8'/>
             </div>
           </div>
           <div className={styles.buttonContainer}>
