@@ -12,6 +12,11 @@ export default class ButtonShowcase extends PureComponent {
     const value = event.target.value;
     myButton.style.color = value;
   }
+  handleChangeBackgroundColor = event => {
+    const myButton = document.getElementsByName('myButton')[0];
+    const value = event.target.value;
+    myButton.style.backgroundColor = value;
+  }
   render() {
     return (
       <>
@@ -37,7 +42,7 @@ export default class ButtonShowcase extends PureComponent {
             </div>
             <div className={styles.colorContainer}>
               <h3 className={styles.h3}>Background Color</h3>
-              <input className={styles.backgroundColor} type='color' onChange={this.handleChange}/>
+              <input className={styles.backgroundColor} type='color' onChange={this.handleChangeBackgroundColor}/>
             </div>
           </div>
           <div className={styles.buttonContainer}>
