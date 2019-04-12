@@ -49,3 +49,14 @@
   font-size: 2.3em;
   text-align: center;
 }
+@media only screen and (max-width: 800px) {
+  .box {
+    width: 50vw;
+    padding: 6vw;
+  }
+  .changeButton {
+    font-size: 8vw;
+    width: 70vw;
+    widows: 120%;
+  }
+}
