@@ -16,15 +16,6 @@ class App extends Component {
         <div className='one'>
           <ButtonShowcase/>
         </div>
-        <div className='four'>
-          <h1>Div 4</h1>
-        </div>
-        <div className='five'>
-          <h1>Div 5</h1>
-        </div>
-        <div className='six'>
-          <h1>Div 6</h1>
-        </div>
       </main>
     );
   }
