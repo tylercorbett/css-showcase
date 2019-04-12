@@ -3,6 +3,7 @@ import './App.scss';
 import BoxSizing from './components/boxsizing/BoxSizing';
 import ButtonShowcase from './components/buttonshowcase/ButtonShowcase';
 import FlexBox from './components/flexbox/FlexBox';
+import Footer from './components/footer/Footer';
 class App extends Component {
   render() {
     return (
@@ -16,15 +17,7 @@ class App extends Component {
         <div className='one'>
           <ButtonShowcase/>
         </div>
-        <div className='four'>
-          <h1>Div 4</h1>
-        </div>
-        <div className='five'>
-          <h1>Div 5</h1>
-        </div>
-        <div className='six'>
-          <h1>Div 6</h1>
-        </div>
+        <Footer/>
       </main>
     );
   }
