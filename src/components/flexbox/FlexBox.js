@@ -2,27 +2,57 @@ import React, { PureComponent } from 'react';
 import styles from './FlexBox.module.scss';
 
 export default class FlexBox extends PureComponent {
+  state = {
+    show: false,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start'
+  }
   handleChangeDirection = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.flexDirection = (value);
+    this.setState({ flexDirection: value })
   }
   handleChangeJustify = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.justifyContent = (value);
+    this.setState({ justifyContent: value })
   }
   handleChangeAlign = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.alignItems = (value);
+    this.setState({ alignItems: value })
+  }
+  handleShow = event => {
+    this.setState({ show: true });
+  }
+  handleClose = event => {
+    this.setState({ show: false });
   }
   render() {
+    const { show, justifyContent, alignItems, flexDirection } = this.state;  
     return(
       <>
         <header>
           <h2 className={styles.title}>Flex Box</h2>
         </header>
+        {show && <aside className={styles.modal}>
+          <button className={styles.closeButton} onClick={this.handleClose}>X</button>
+          <p className={styles.sampleCode}>
+            .boxContainer &#123;<br/>
+            display: flex;<br/>
+            flex-direction: {flexDirection};<br/>
+            justify-content: {justifyContent};<br/>
+            align-items: {alignItems};<br/>
+            width: 50%;<br/>
+            padding: 2%;<br/>
+            border: 4px white groove;<br/>
+            &#125;
+          </p>
+        </aside>}
         <main className={styles.main}>
           <div className={styles.controls}>
             <div className={styles.flexDirection}>
@@ -59,6 +89,7 @@ export default class FlexBox extends PureComponent {
                 <div className={styles.three}>3</div>
                 <div className={styles.four}>4</div>
             </div>
+            <button className={styles.codeButton} onClick={this.handleShow}>See the code</button>
             <p className={styles.description}>
                 Flex box is everything you need to position elements how you&#39;d like. Play with some of the above controls to move these four boxes around.
             </p>
