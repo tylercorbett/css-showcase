@@ -2,6 +2,9 @@ import React, { PureComponent } from 'react';
 import styles from './FlexBox.module.scss';
 
 export default class FlexBox extends PureComponent {
+  state = {
+    show: false
+  }
   handleChangeDirection = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
@@ -17,12 +20,22 @@ export default class FlexBox extends PureComponent {
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.alignItems = (value);
   }
+  handleShow = event => {
+    this.setState({ show: true });
+    console.log('clicked');
+  }
   render() {
+    const { show } = this.state;  
     return(
       <>
         <header>
           <h2 className={styles.title}>Flex Box</h2>
         </header>
+        {show && <aside className={styles.modal}>
+          <p>
+            This is the modal
+          </p>
+        </aside>}
         <main className={styles.main}>
           <div className={styles.controls}>
             <div className={styles.flexDirection}>
@@ -59,7 +72,7 @@ export default class FlexBox extends PureComponent {
                 <div className={styles.three}>3</div>
                 <div className={styles.four}>4</div>
             </div>
-            <button className={styles.codeButton}>See the code</button>
+            <button className={styles.codeButton} onClick={this.handleShow}>See the code</button>
             <p className={styles.description}>
                 Flex box is everything you need to position elements how you&#39;d like. Play with some of the above controls to move these four boxes around.
             </p>

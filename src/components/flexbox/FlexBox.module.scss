@@ -42,6 +42,13 @@
     align-items: center;
     flex-direction: column;
 }
+.modal {
+    position: fixed;
+    left: 1em;
+    width: 80%;
+    background-color: red;
+    margin: 2em;
+}
 .select {
     width: 50%;
     margin: 0 auto 2% auto;
