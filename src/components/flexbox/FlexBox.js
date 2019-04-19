@@ -3,22 +3,28 @@ import styles from './FlexBox.module.scss';
 
 export default class FlexBox extends PureComponent {
   state = {
-    show: false
+    show: false,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start'
   }
   handleChangeDirection = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.flexDirection = (value);
+    this.setState({ flexDirection: value })
   }
   handleChangeJustify = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.justifyContent = (value);
+    this.setState({ justifyContent: value })
   }
   handleChangeAlign = event => {
     const value = event.target.value;
     const boxContainer = document.getElementsByName('boxContainer')[0];
     boxContainer.style.alignItems = (value);
+    this.setState({ alignItems: value })
   }
   handleShow = event => {
     this.setState({ show: true });
@@ -27,7 +33,7 @@ export default class FlexBox extends PureComponent {
     this.setState({ show: false });
   }
   render() {
-    const { show } = this.state;  
+    const { show, justifyContent, alignItems, flexDirection } = this.state;  
     return(
       <>
         <header>
@@ -35,8 +41,16 @@ export default class FlexBox extends PureComponent {
         </header>
         {show && <aside className={styles.modal}>
           <button className={styles.closeButton} onClick={this.handleClose}>X</button>
-          <p>
-            This is the modal
+          <p className={styles.sampleCode}>
+            .boxContainer &#123;<br/>
+            display: flex;<br/>
+            flex-direction: {flexDirection};<br/>
+            justify-content: {justifyContent};<br/>
+            align-items: {alignItems};<br/>
+            width: 50%;<br/>
+            padding: 2%;<br/>
+            border: 4px white groove;<br/>
+            &#125;
           </p>
         </aside>}
         <main className={styles.main}>
