@@ -22,7 +22,9 @@ export default class FlexBox extends PureComponent {
   }
   handleShow = event => {
     this.setState({ show: true });
-    console.log('clicked');
+  }
+  handleClose = event => {
+    this.setState({ show: false });
   }
   render() {
     const { show } = this.state;  
@@ -32,6 +34,7 @@ export default class FlexBox extends PureComponent {
           <h2 className={styles.title}>Flex Box</h2>
         </header>
         {show && <aside className={styles.modal}>
+          <button className={styles.closeButton} onClick={this.handleClose}>X</button>
           <p>
             This is the modal
           </p>

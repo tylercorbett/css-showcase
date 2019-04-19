@@ -4,6 +4,11 @@
     padding: 2%;
     border: 4px white groove;
 }
+.closeButton {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
 .codeButton {
     padding: 1%;
     font-size: 1.5em;
@@ -48,6 +53,7 @@
     width: 80%;
     background-color: red;
     margin: 2em;
+    animation: fade-in 0.5s ease-in;
 }
 .select {
     width: 50%;
@@ -121,4 +127,8 @@
     .select {
         width: 80%;
     }
+}
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
