@@ -7,12 +7,10 @@ export default class BoxSizing extends PureComponent {
     if(changeBox.style.boxSizing === 'border-box') {
       changeBox.style.boxSizing = 'content-box';
       changeBox.innerHTML = 'Content Box'
-      console.log('it was border-box');
     }
     else {
       changeBox.style.boxSizing = 'border-box';
       changeBox.innerHTML = 'Border Box';
-      console.log('it was content-box');
     }
   }
   componentDidMount() {
