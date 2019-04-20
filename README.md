@@ -5,6 +5,7 @@
 ### Included:
 * Demo of box-sizing: Content-Box (default)  vs. Border-Box
 * Flexbox - Why it is the fix to all your problems
+* Button maker - Playing with some controls to design your own button!
 
 ### Upcoming:
 * Sticky positioning - What is it? How do I use it?
