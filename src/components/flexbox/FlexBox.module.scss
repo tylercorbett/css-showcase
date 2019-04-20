@@ -18,9 +18,9 @@
     border-radius: 2rem;
     transition: .2s ease-in-out;
     cursor: pointer;
-}
-.codeButton:hover {
-    filter: drop-shadow(0 0 .3em white);
+    &:hover {
+        filter: drop-shadow(0 0 .3em white);
+    }
 }
 .controls {
     width: 100%;    
