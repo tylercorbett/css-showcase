@@ -1,15 +1,19 @@
 .box {
-  width: 30%;
-  padding: 2em;
+  width: 10em;
+  height: 2em;
   margin: 0 auto 1em auto;
+  padding: 0 1em;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   background-color: rgb(107, 214, 121);
   color: white;
   text-align: center;
   font-size: 1.8em;
+  font-weight: bold;
+  line-height: 0;
   overflow: hidden;
 }
 .changeButton {
@@ -41,6 +45,12 @@
   display: flex;
   flex-direction: column;
 }
+.paddingLine {
+  width: 1.9em;
+  border-top: 2px orange dashed;
+  color: orange;
+  padding-top: .5em;
+}
 .title {
   width: 100%;
   margin: 0;
@@ -51,9 +61,21 @@
   font-size: 2.3em;
   text-align: center;
 }
+.widthLine {
+  display: inline;
+  padding: 0.5em;
+  width: 18em;
+  border-top: 2px white dashed;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.widthLineContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100vw;
+}
 @media only screen and (max-width: 800px) {
-  .box {
-    width: 50vw;
-    padding: 6vw;
-  }
+  
 }
