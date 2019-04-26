@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer';
 class App extends Component {
   render() {
     return (
-      <main>
+      <main className='all'>
         <div className='two'>
           <FlexBox/>
         </div>
