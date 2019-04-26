@@ -2,6 +2,13 @@ import React, { PureComponent } from 'react';
 import styles from './ButtonShowcase.module.scss';
 
 export default class ButtonShowcase extends PureComponent {
+  state = {
+    borderRadius: 0,
+    fontColor: '#000000',
+    backgroundColor: '#FFFFFF',
+    fontSize: '120%',
+    show: false
+  }
   handleChangeBorderRadius = event => {
     const myButton = document.getElementsByName('myButton')[0];
     const value = event.target.value;
@@ -23,12 +30,40 @@ export default class ButtonShowcase extends PureComponent {
     const newFontSize = parseInt(value) + '%';
     myButton.style.fontSize = newFontSize;
   }
+  handleClick = () => {
+    this.setState({ show: true });
+  }
+  handleClose = () => {
+    this.setState({ show: false });
+  }
   render() {
+    const { show, borderRadius, backgroundColor, fontSize, fontColor } = this.state;
     return (
       <>
         <header>
           <h2 className={styles.title}>Button Builder</h2>
         </header>
+        {show && <aside className={styles.modal}>
+          <button className={styles.closeButton} onClick={this.handleClose}>X</button>
+          <p className={styles.sampleCode}>
+            .myButton &#123;<br/>
+            width: 70%;<br/>
+            padding: 3%;<br/>
+            font-size: {fontSize};<br/>
+            font-weight: bold;<br/>
+            border-radius: {borderRadius}<br/>
+            border: none<br/>
+            color: {fontColor};<br/>
+            cursor: pointer;<br/>
+            background-color: {backgroundColor};<br/>
+            transition: .2s ease-in-out;<br/>
+            &#125; <br/>
+            .myButton:hover &#123;<br/>
+              background-color: transparent;<br/>
+              border: 3px solid black;<br/>
+            &#125; <br/>
+          </p>
+        </aside>}
         <main className={styles.main}>
           <div className={styles.controlsContainer}>
             <div className={styles.shapeContainer}>
@@ -52,7 +87,7 @@ export default class ButtonShowcase extends PureComponent {
             </div>
           </div>
           <div className={styles.buttonContainer}>
-            <button className={styles.myButton} name='myButton' onClick={this.handleClick}>My Button</button>
+            <button className={styles.myButton} name='myButton' onClick={this.handleClick}>View Code</button>
           </div>
         </main>
       </>

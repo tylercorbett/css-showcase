@@ -9,6 +9,13 @@
     margin: auto;
     padding: 1%;
 }
+.closeButton {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    border: 1px rgb(40, 40, 83) solid;
+    border-radius: 4em;
+}
 .colorContainer {
     display: flex;
     flex-direction: column;
@@ -39,6 +46,18 @@
 .main {
     display: flex;
     align-items: center;
+}
+.modal {
+    z-index: 1;
+    position: absolute;
+    left: 40%;
+    top: 140%;
+    padding: 1%;
+    max-width: 40%;
+    background-color: white;
+    border: 0.3em solid rgb(40, 40, 83);
+    text-align: center;
+    animation: fade-in 0.5s ease-in;
 }
 .myButton {
     width: 70%!important;
@@ -96,4 +115,12 @@
     .select {
         width: 33vw;
     }
+    .modal {
+      top: 142%;
+      left: 30%;
+    }
+}
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
