@@ -31,7 +31,7 @@ export default class ButtonShowcase extends PureComponent {
     myButton.style.fontSize = newFontSize;
   }
   handleClick = () => {
-    this.setState({ show: true });
+    this.setState({ show: false });
   }
   handleClose = () => {
     this.setState({ show: false });

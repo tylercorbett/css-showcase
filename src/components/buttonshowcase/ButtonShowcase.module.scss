@@ -44,6 +44,7 @@
     text-align: center;
 }
 .main {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -108,10 +109,11 @@
     .main {
         display: flex;
         flex-direction: column;
+        padding-bottom: 5rem;
     }
     .myButton {
-        margin: 18% auto 2% auto;
-        padding: 3vw;
+        position: absolute;
+        bottom: 1rem;
     }
     .select {
         width: 33vw;
