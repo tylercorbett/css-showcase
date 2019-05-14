@@ -42,7 +42,7 @@ export default class BoxSizing extends PureComponent {
               <span className={styles.widthLine}>The box&#39;s width</span>
               <span className={styles.paddingLineRight} name='paddingLineRight'>Padding</span>
             </div>
-            <p className={styles.description}>Box-sizing tells us whether the padding is included in width. Notice how the width stays the same but the padding is either <i>inside</i> or <i>outside</i> the box.</p>
+            <p className={styles.description}>Box-sizing tells us whether the padding is included in width. Notice how the width stays the same but the padding is either <i>inside</i> or <i>outside</i> the width.</p>
           </main>
         </>
     );
