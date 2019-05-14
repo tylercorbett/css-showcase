@@ -1,6 +1,7 @@
 .box {
   width: 10em;
   height: 2em;
+  max-width: 78vw;
   margin: 0 auto 1em auto;
   padding: 0 1em;
   box-sizing: border-box;
@@ -44,6 +45,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .paddingLineRight {
   position: relative;
